@@ -1,21 +1,37 @@
-import React from 'react';
-//import { Route, Routes } from 'react-router-dom';
-import 'primereact/resources/themes/lara-light-blue/theme.css';
+import React, { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+// Primereac
+import 'primereact/resources/themes/bootstrap4-light-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 
 // Components
-//import Header from './components/Header';
+import ClassDropdownDecision from './components/ClassDropdownDecision';
+import HookDropdownDecision from './components/HookDropdownDecision';
+import QueryDropdownDecision from './components/QueryDropdownDecision';
+import HookFormDropdownDecision from './components/HookFormDropdownDecision';
 
 // Pages
 import Home from './pages/Home';
-//import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFound';
 
 function App() {
- 
+
   return (
-    <Home />
+    <>
+      <Suspense>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/ClassDropdownDecision" element={<ClassDropdownDecision />} />
+          <Route exact path="/HookDropdownDecision" element={<HookDropdownDecision />} />
+          <Route exact path="/QueryDropdownDecision" element={<QueryDropdownDecision />} />
+          <Route exact path="/HookFormDropdownDecision" element={<HookFormDropdownDecision />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 }
 
