@@ -12,3 +12,5 @@ npm start
 I created 3 different react implementations (Hook component, Class component, query component) to add a new option in a dropdown component without reloading the page.
 
 I delegated to the parent page to request the API and sent the results to the child with props, and the page is still refreshing. If I manually change the JSON file the page reloads. I updated the GitHub repository with the new implementation. Should I give up and move to Next.js?
+
+https://www.loom.com/share/edee327a906740af915eb6d5dba9ad87?sid=a299ad2e-09d5-417e-a279-6f39741a5135
