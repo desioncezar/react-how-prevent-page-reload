@@ -7,10 +7,11 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 
-// Custom CSS
-import './App.css';
-
 // Components
+import ClassDropdownDecision from './components/ClassDropdownDecision';
+import HookDropdownDecision from './components/HookDropdownDecision';
+import QueryDropdownDecision from './components/QueryDropdownDecision';
+import HookFormDropdownDecision from './components/HookFormDropdownDecision';
 import HookDecision from './components/HookDecision';
 
 // Pages
@@ -24,6 +25,10 @@ function App() {
       <Suspense>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/ClassDropdownDecision" element={<ClassDropdownDecision />} />
+          <Route exact path="/HookDropdownDecision" element={<HookDropdownDecision />} />
+          <Route exact path="/QueryDropdownDecision" element={<QueryDropdownDecision />} />
+          <Route exact path="/HookFormDropdownDecision" element={<HookFormDropdownDecision />} />
           <Route exact path="/HookDecision" element={<HookDecision />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

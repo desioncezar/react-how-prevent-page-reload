@@ -7,7 +7,7 @@ import { InputText } from "primereact/inputtext";
 import {
     getDecision,
     //postDecision
-} from './ServerSideApi';
+} from './Apis';
 
 const HookFormDropdownDecision = () => {
 
