@@ -1,7 +1,7 @@
 async function getDecision() {
     try {
         return await fetch(
-            `http://127.0.0.1:5000/decision`
+            `http://127.0.0.1:5002/decision`
         ).then((response) => response.json())
     } catch (error) {
         console.log(error);
@@ -12,7 +12,7 @@ async function getDecision() {
 async function postDecision(data) {
     try {
         return await fetch(
-            `http://127.0.0.1:5000/decision`, {
+            `http://127.0.0.1:5002/decision`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
